@@ -1,0 +1,28 @@
+- Cała struktura (klasy z odpowiednimi powiązaniami),
+- Metody potrzebne do realizacji wybranego przypadku (lub przypadków) użycia,
+- Elementy graficznego interfejsu użytkownika (GUI), które są niezbędne do zaprezentowania pracującej
+ implementacji z działającym wybranym przypadkiem użycia. Każdy projekt musi posiadać GUI.
+- Minimalna implementacja GUI musi obejmować interakcję co najmniej dwóch klas połączonych asocjacją
+ (wymagana liczność docelowa: „wiele”), np. mamy dwie klasy: Pracownik i Firma; odpowiedni widget
+ (wyświetlający wiele elementów, np. ListBox) zawiera listę firm, po kliknięciu w dowolną pozycję
+ wyświetla się inny widget (wyświetlający wiele elementów, np. ListBox) zawierający listę jej pracowników
+ pobraną za pomocą zdefiniowanej aoscjacji (przeważnie oznacza to brak stosowania SQL-a). Zaimplementowane GUI,
+ które tylko tworzy połączenia pomiędzy obiektami i nie pozwala na w/w interakcję, nie wystarczy do zaliczenia.
+ Analogicznie, niewystarczające są np. rozwiązania z jednym widget'em, TextBox’em, licznością docelową „1” lub
+ filtrujące dane z ekstensji (zamiast korzystania z uprzednio zdefiniowanej asocjacji).
+- Implementacja musi zawierać przykładowe dane ilustrujące poprawne działanie.
+- Należy zwrócić uwagę na jakość i ergonomię GUI (np. skalowanie okien, kolorystyka, filozofia działania) – 
+jest to ważny składnik oceny końcowej. Projekt i wykonanie GUI (można używać dedykowanych edytorów) powinno 
+być zgodne z zasadami użyteczności (usability), podawanymi na wykładzie.
+- Wszystkie dane (a nie tylko te z przypadków użycia) przechowywane w systemie muszą być trwałe (np. plik, 
+baza danych, dedykowana biblioteka, itp.).
+- Część implementacyjna projektu będzie indywidualnie odbierana w czasie zajęć (patrz dalej). W związku z 
+tym nie trzeba jej przekazywać w żadnej trwałej formie.
+- Językiem implementacji może być Java, C# lub C++. Inne języki wymagają zgody prowadzącego ćwiczenia.
+- Każdy projekt będzie indywidualnie odbierany w terminie podanym w ogłoszeniu kursu (do kilku dni przed egzaminem).
+ W trakcie odbioru można spodziewać się szczegółowych pytań dotyczących sposobu implementacji,
+ np. „co by było gdyby...”, „dlaczego jest to zrobione w ten sposób...”, „proszę dokonać następującej
+ modyfikacji...”. Osoby, które samodzielnie wykonały projekt nie powinny mieć problemów z udzieleniem
+ odpowiedzi na powyższe pytania. Brak umiejętności odpowiedzi na powyższe pytania oznacza brak zaliczenia
+ ćwiczeń.
+- Rozwiązania niespełniające ww. warunków, nie zaliczą ćwiczeń.

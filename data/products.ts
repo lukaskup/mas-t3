@@ -1,0 +1,102 @@
+import { IService } from "./../models/product";
+import { IPhysical } from "../models/product";
+import { v4 as uuidv4 } from "uuid";
+
+export const products: (IPhysical | IService)[] = [
+  {
+    id: uuidv4(),
+    name: "produkt 1",
+    price: 100,
+    type: "szafa",
+    qty: 20,
+    category: "duża",
+    parameters: ["duża", "szeroka", "czarna", "itp"],
+  },
+  {
+    id: uuidv4(),
+    name: "produkt 1",
+    price: 100,
+    type: "metal",
+    qty: 20,
+    category: "duża",
+
+    parameters: ["duża", "szeroka", "czarna", "itp"],
+  },
+  {
+    id: uuidv4(),
+    name: "produkt 2",
+    price: 100,
+    type: "pieczywo",
+    qty: 120,
+    category: "duża",
+
+    parameters: ["duża", "szeroka", "czarna", "itp"],
+  },
+  {
+    id: uuidv4(),
+    name: "produkt 3",
+    price: 100,
+    type: "costam",
+    qty: 210,
+    category: "duża",
+    parameters: ["duża", "szeroka", "czarna", "itp"],
+  },
+  {
+    id: uuidv4(),
+    name: "produkt 4",
+    price: 100,
+    type: "szafa",
+    qty: 0,
+    category: "duża",
+    parameters: ["duża", "szeroka", "czarna", "itp"],
+  },
+  {
+    id: uuidv4(),
+    name: "produkt 5",
+    price: 100,
+    type: "szafa",
+    qty: 0,
+    category: "duża",
+    parameters: ["duża", "szeroka", "czarna", "itp"],
+  },
+  {
+    id: uuidv4(),
+    name: "usługa 1",
+    price: 2000,
+    avgTimeToComplete: "7 dni",
+    available: true,
+    type: "usługa",
+  },
+  {
+    id: uuidv4(),
+    name: "usługa 2",
+    price: 12000,
+    avgTimeToComplete: "7 dni",
+    available: true,
+    type: "usługa",
+  },
+  {
+    id: uuidv4(),
+    name: "usługa 3",
+    price: 22000,
+    avgTimeToComplete: "7 dni",
+    available: false,
+    type: "usługa",
+  },
+  {
+    id: uuidv4(),
+    name: "usługa 4",
+    price: 42000,
+    avgTimeToComplete: "7 dni",
+    available: false,
+    type: "usługa",
+  },
+  {
+    id: uuidv4(),
+    name: "usługa 5",
+    price: 21000,
+    avgTimeToComplete: "7 dni",
+    available: false,
+    type: "usługa",
+  },
+];
