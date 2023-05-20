@@ -14,11 +14,12 @@ export interface IOrder {
   price: number;
   description: string;
   status: OrderStatus;
-  createdAt: Date;
   completedAt: Date;
-  payment: IPayment;
+  payment?: IPayment;
+  //powtarzalny
   products: (IPhysical | IService)[];
   client: IClient | null;
+  createdAt: Date;
 }
 
 export type OrderFormValues = Omit<

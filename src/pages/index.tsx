@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import styles from "../styles/Home.module.css";
 import { api } from "../utils/api";
@@ -11,6 +10,7 @@ const Home: NextPage = () => {
   const [isOrdersLoading, setOrdersLoading] = useState(true);
 
   const clearDb = api.data.clearDb.useMutation();
+  const fillData = api.data.fillData.useMutation();
 
   return (
     <div className={styles.container}>
@@ -29,7 +29,13 @@ const Home: NextPage = () => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item>fill data</Dropdown.Item>
+          <Dropdown.Item
+            onClick={() => {
+              fillData.mutate();
+            }}
+          >
+            fill data
+          </Dropdown.Item>
           <Dropdown.Item
             onClick={() => {
               clearDb.mutate();

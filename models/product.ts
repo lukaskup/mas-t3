@@ -7,6 +7,7 @@ interface IProduct {
 
 export interface IPhysical extends IProduct {
   category: string;
+  //powtarzalny
   parameters: string[];
   qty: number;
 }
