@@ -1,3 +1,5 @@
+import { IOrder } from "./order";
+
 interface IPerson {
   id: string;
   firstname: string;
@@ -20,6 +22,7 @@ export interface IClient extends IPerson {
   email: string;
   deliveryAddress: string;
   correspondenceAddress: string;
+  orders: IOrder[]
 }
 
 export interface IPhysicalEmployee extends IEmployee {

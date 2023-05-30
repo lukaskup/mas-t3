@@ -1,4 +1,4 @@
-import { StringValidation } from "zod";
+import { IClient } from './../src/models/person';
 import { IInvoice } from "./invoice";
 import { IOrder } from "./order";
 
@@ -12,8 +12,10 @@ export interface IPayment {
   number: string;
   completed: boolean;
   type: PaymentType;
+  //zwykla
   invoice?: IInvoice;
   order?: IOrder;
+  client: IClient;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -28,21 +30,17 @@ export class Payment {
   public number: string = "cuid";
   public completed: boolean = false;
   public type: PaymentType = PaymentType.cash;
-  //zlozony
   public invoice?: IInvoice;
   public order?: IOrder;
-  //zlozony
   public createdAt: Date = new Date();
   public updatedAt: Date = new Date();
-  //wyliczalny
   public getAmount = () => {
     return this.order?.products.reduce((prev, curr) => prev + curr.price, 0);
   };
 
-  //klasowy?
   public static VAT = 0.23;
 
-  //pochodny?
+  //@ts-ignore
   public getVatValue = this.getAmount() ? this.getAmount() * Payment.VAT : 0;
 
   Payment({ payment }: { payment: IPayment }) {
@@ -54,14 +52,12 @@ export class Payment {
     this.updatedAt = payment.updatedAt;
   }
 
-  //metoda klasowa
   public static showInfo(payment: IPayment) {
     console.log(
       `${payment.id} - ${payment.number} - ${payment.createdAt.toISOString()}`
     );
   }
 
-  //przesloniecie / przeciazenie
   public changeId(id: number): void;
   public changeId(id: string): void;
 
@@ -71,12 +67,5 @@ export class Payment {
     } else {
       this.id = id;
     }
-  }
-}
-
-//ts override example
-class Payment2 extends Payment {
-  public showInfo() {
-    console.log(this.id);
   }
 }
