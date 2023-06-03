@@ -1,9 +1,4 @@
-import {
-  getProviders,
-  signIn,
-  getCsrfToken,
-  useSession,
-} from "next-auth/react";
+import { getProviders, getCsrfToken, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { CtxOrReq } from "next-auth/client/_utils";
@@ -28,7 +23,8 @@ const SignUpPage = () => {
     password: "",
     passwordConfirm: "",
   });
-  const signup = api. .useMutation("auth.signup");
+  //@ts-ignore
+  const signup = api.useMutation("auth.signup");
   useEffect(() => {
     if (session) {
       router.push("/");

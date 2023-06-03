@@ -96,6 +96,7 @@ model Person {
   education             String?
   incomingMeetings      String[]
   courses               String[]
+  orders                Order[]
   createdAt             DateTime @default(now())
   updatedAt             DateTime @updatedAt
 }
@@ -112,6 +113,8 @@ model Order {
   products    ProductOrder[]
   delivery    Delivery?
   return      Return?
+  personId    String?
+  person      Person?        @relation(fields: [personId], references: [id])
 }
 
 model Discount {
